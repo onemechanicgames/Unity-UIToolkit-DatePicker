@@ -1,0 +1,16 @@
+{
+    "name": "OMG.UI.DatePickerUITK.DatePickerSample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:04d990b41732d4779947d11cb4022a74"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
