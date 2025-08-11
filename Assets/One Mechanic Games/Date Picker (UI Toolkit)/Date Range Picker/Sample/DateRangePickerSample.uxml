@@ -1,0 +1,26 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/One%20Mechanic%20Games/Date%20Picker%20(UI%20Toolkit)/PackageResources/Styles/DateRangePicker.uss?fileID=7433441132597879392&amp;guid=ba0921e753802453c95e8657849a00e2&amp;type=3#DateRangePicker" />
+    <engine:VisualElement style="flex-grow: 1; flex-direction: row; background-color: rgba(255, 255, 255, 0.53);">
+        <engine:VisualElement style="flex-grow: 1; justify-content: center; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; display: flex;">
+            <engine:VisualElement style="flex-grow: 0; justify-content: center;">
+                <engine:TextField label="Jump to date (MMddyyyy)" placeholder-text="MMddyyyy" name="jump-to-date-input" value="11231997" />
+                <engine:Button text="Jump to Date" name="jump-to-date-button" />
+            </engine:VisualElement>
+            <engine:VisualElement style="flex-grow: 0; justify-content: center; margin-top: 30px;">
+                <engine:TextField label="Select from date (MMddyyyy)" placeholder-text="MMddyyyy" name="make-selection-from-input" value="08292025" />
+                <engine:TextField label="Select to date (MMddyyyy)" placeholder-text="MMddyyyy" name="make-selection-to-input" value="12232025" />
+                <engine:Button text="Select date range" name="make-selection-button" />
+            </engine:VisualElement>
+            <engine:VisualElement style="flex-grow: 0; justify-content: center; margin-top: 30px;">
+                <engine:Button text="Clear Selection" name="clear-selected-button" />
+            </engine:VisualElement>
+            <engine:VisualElement style="flex-grow: 0; justify-content: center; margin-top: 30px;">
+                <engine:Label text="&lt;b&gt;Selected date range : &lt;/b&gt;" />
+                <engine:Label text="-" name="selected-date-label" style="-unity-text-align: upper-center;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 1; justify-content: flex-start; padding-top: 10%;">
+            <OMG.UI.DatePickerUITK.DateRangePicker min-year="1990" max-year="2030" month-label-format="Full" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

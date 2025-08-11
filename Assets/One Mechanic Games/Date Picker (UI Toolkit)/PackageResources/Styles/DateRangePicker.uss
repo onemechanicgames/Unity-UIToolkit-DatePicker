@@ -1,0 +1,9 @@
+@import "./../../../Date Picker (UI Toolkit)/PackageResources/Styles/DatePicker.uss";
+
+:root {
+    --day-highlighted-background-color: yellow;
+}
+
+.omg__date-picker__grid-container__row-container__grid-day.highlighted {
+    background-color: var(--day-highlighted-background-color);
+}

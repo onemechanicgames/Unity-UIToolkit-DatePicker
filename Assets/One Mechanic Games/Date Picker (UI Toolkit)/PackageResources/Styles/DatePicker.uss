@@ -1,0 +1,220 @@
+:root {
+    flex-shrink: 1;
+    flex-grow: 0;
+    
+    --date-picker-background-color: white;
+    --dropdown-item-hover-highlight-color: cornflowerblue;
+    --day-hover-highlight-color: cornflowerblue;
+    --day-selected-background-color: black;
+    --other-month-day-text-color: gray;
+    --current-month-day-text-color: black;
+    
+    --navigation-button-size: 26px;
+    --month-dropdown-width: 130px;
+    --year-dropdown-width: 80px;
+    --grid-item-size: 36px;
+}
+
+.omg__date-picker {
+    flex-direction: column;
+    flex-shrink: 1;
+    padding: 10px;
+    padding-top: 14px;
+    background-color: var(--date-picker-background-color);
+    align-self: flex-start;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: gray;
+}
+
+/*************** HEADER ***************/
+
+.omg__date-picker__header-container {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 6px;
+    align-self: flex-start;
+    justify-content: center;
+}
+
+.omg__date-picker__header-container__navigation-button {
+    position: absolute;
+    width: var(--navigation-button-size);
+    height: var(--navigation-button-size);
+    align-self: center;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 0;
+    justify-content: center;
+}
+
+.omg__date-picker__header-container__navigation-button:hover {
+    border-width: 2px;
+}
+
+.omg__date-picker__header-container__navigation-button .icon {
+    width: 50%;
+    height: 50%;
+    -unity-background-image-tint-color: gray;
+    align-self: center;
+}
+
+.omg__date-picker__header-container__navigation-button.left .icon {
+    background-image: url("../Sprites/chevron-left.png");
+}
+
+.omg__date-picker__header-container__navigation-button.right .icon {
+    background-image: url("../Sprites/chevron-right.png");
+}
+
+.omg__date-picker__header-container__navigation-button.left {
+    left: 0;
+}
+
+.omg__date-picker__header-container__navigation-button.right {
+    right: 0;
+}
+
+.omg__date-picker__header-container__dropdown {
+    height: 34px;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 4px;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 10;
+}
+
+.omg__date-picker__header-container__dropdown.month {
+    width: var(--month-dropdown-width);
+}
+
+.omg__date-picker__header-container__dropdown.year {
+    width: var(--year-dropdown-width);
+}
+
+.omg__date-picker__header-container__dropdown:hover  {
+    border-width: 2px;
+}
+
+.omg__date-picker__header-container__dropdown__chevron {
+    width: 12px;
+    height: 12px;
+    translate: 4px 0;
+    align-self: flex-end;
+    -unity-background-image-tint-color: black;
+    background-image: url("../Sprites/chevron-down.png");
+}
+
+.open .omg__date-picker__header-container__dropdown__chevron {
+    background-image: url("../Sprites/chevron-up.png");
+}
+
+/*************** STATIC WEEK LABELS ***************/
+
+.omg__date-picker__week-labels-container {
+    flex-direction: row;
+    align-self: flex-start;
+    margin-bottom: 6px;
+}
+
+.omg__date-picker__week-labels-container__week-label {
+    width: var(--grid-item-size);
+    -unity-text-align: middle-center;
+}
+
+/*************** GRID ***************/
+
+.omg__date-picker__grid-container {
+    align-self: flex-start;
+    flex-shrink: 1;
+}
+
+.omg__date-picker__grid-container__row-container {
+    flex-direction: row;
+    align-self: flex-start;
+}
+
+.omg__date-picker__grid-container__row-container__grid-day {
+    width: var(--grid-item-size);
+    height: var(--grid-item-size);
+    flex-shrink: 0;
+    flex-grow: 0;
+    color: var(--other-month-day-text-color);
+    -unity-text-align: middle-center;
+}
+
+.omg__date-picker__grid-container__row-container__grid-day.this-month {
+    color: var(--current-month-day-text-color);
+}
+
+.omg__date-picker__grid-container__row-container__grid-day:hover {
+    color: white;
+    background-color: var(--day-hover-highlight-color);
+    border-radius: 4px;
+}
+
+.omg__date-picker__grid-container__row-container__grid-day.selected {
+    color: white;
+    background-color: var(--day-selected-background-color);
+    border-radius: 4px;
+}
+
+/*************** DROPDOWN LISTS ***************/
+
+.omg__date-picker__dropdown-list .unity-scroll-view {
+    padding: 4px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: gray;
+    background-color: white;
+    max-height: 180px;
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view RepeatButton {
+    background-color: white;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: gray;
+    width: 18px;
+    height: 18px;
+    align-self: center;
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view RepeatButton:hover {
+    border-width: 2px;
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view #unity-low-button {
+    background-image: url("../Sprites/chevron-up.png");
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view #unity-high-button {
+    background-image: url("../Sprites/chevron-down.png");
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view #unity-tracker {
+    background-color: transparent;
+    border-width: 0;
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view #unity-dragger {
+    background-color: gray;
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view .unity-list-view__item {
+    -unity-text-align: middle-center;
+}
+
+.omg__date-picker__dropdown-list .unity-scroll-view .unity-list-view__item:hover {
+    background-color: var(--dropdown-item-hover-highlight-color);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
