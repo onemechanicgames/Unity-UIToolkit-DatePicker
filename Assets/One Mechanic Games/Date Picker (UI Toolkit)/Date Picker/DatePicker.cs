@@ -486,7 +486,7 @@ namespace OMG.UI.DatePickerUITK
             _yearDropdownValues = new List<string>(count);
 
             for (int i = 0; i < count; i++)
-                _yearDropdownValues.Add($"{_minYear + i}");
+                _yearDropdownValues.Add($"{_maxYear - i}");
 
             _yearListView.itemsSource = _yearDropdownValues;
             _yearListView.Rebuild();
@@ -518,13 +518,12 @@ namespace OMG.UI.DatePickerUITK
         }
 
         
-        internal virtual GridDayInfo SetDayInfo(int week, int day, DateTime date, bool belongsToCurrentMonth, bool shouldHide) {
+        private void SetDayInfo(int week, int day, DateTime date, bool belongsToCurrentMonth, bool shouldHide) {
             GridDayInfo dayInfo = DayGrid[week, day];
             dayInfo.Date = date;
             dayInfo.BelongsToCurrentMonth = belongsToCurrentMonth;
             dayInfo.ShouldHide = shouldHide;
             dayInfo.ShouldInvisible = ShowCurrentMonthDatesOnly && !shouldHide;
-            return dayInfo;
         }
         
 
