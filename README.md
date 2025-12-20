@@ -1,5 +1,9 @@
 📅 DatePicker & DateRangePicker for Unity UI Toolkit
 
+![alt text][logo]
+
+[logo]: RepoResources/range-picker-screenshot.png
+
 A set of custom UI Toolkit components that bring modern, user-friendly date selection to your Unity projects.
 Includes:
 
@@ -83,7 +87,3 @@ Tested with Unity 6.
 You can override the provided USS styles to match your project's theme.
 
 The components are designed to work with runtime UI Toolkit (not Editor UI Toolkit).
-
-
-📜 License
-This asset is licensed for use in your Unity projects as per the Unity Asset Store terms.
