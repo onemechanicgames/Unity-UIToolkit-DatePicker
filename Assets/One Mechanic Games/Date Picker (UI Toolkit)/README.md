@@ -27,7 +27,7 @@ Public API for easy runtime control.
 
 Import the package into your Unity project.
 
-Ensure your project is using UI Toolkit (Unity 2021.3+ recommended).
+Ensure your project is using UI Toolkit (Unity 6.0+ recommended).
 
 The components and styles will be available under:
 

@@ -42,6 +42,9 @@ namespace OMG.UI.DatePickerUITK.Sample
 
         
         private void JumpToDate() {
+            
+            _dateRangePicker.value = (null, DateTime.Today);
+            return;
             if (DateTime.TryParseExact(_dateInputField.value, "MMddyyyy", null, System.Globalization.DateTimeStyles.None, out DateTime result))
             {
                 _dateRangePicker.CurrentDate = result;
